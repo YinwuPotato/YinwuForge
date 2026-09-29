@@ -1,7 +1,7 @@
 # YinwuForge — Yinwu锻造
 # YinwuForge — Forge System
 
-**最新版本：v1.2.3** | [下载 Release](https://github.com/qumingjam/YinwuForge/releases/tag/v1.2.3)
+**最新版本：v1.2.3** | [下载 Release](https://github.com/YinwuPotato/YinwuForge/releases/tag/v1.2.3)
 
 A Minecraft forge plugin for enhancing equipment through altars, materials, and potions.
 
@@ -102,7 +102,7 @@ YinwuForge
 依赖：**Java 21+**、**Maven 3.8+**
 
 ```bash
-git clone https://github.com/qumingjam/YinwuForge.git
+git clone https://github.com/YinwuPotato/YinwuForge.git
 cd YinwuForge
 mvn clean package
 ```
@@ -113,9 +113,9 @@ mvn clean package
 
 ## Dependencies | 依赖
 
-- **[YinwuPluginLib](https://github.com/qumingjam/YinwuPluginLib)**（必需）
+- **[YinwuPluginLib](https://github.com/YinwuPotato/YinwuPluginLib)**（必需）
 - **[Paper API 1.21+](https://papermc.io/)**（provided）
-- **[YinwuEnchant](https://github.com/qumingjam/YinwuEnchant)**（可选，锻造成功/极品时联动附加自定义附魔）
+- **[YinwuEnchant](https://github.com/YinwuPotato/YinwuEnchant)**（可选，锻造成功/极品时联动附加自定义附魔）
 
 ---
 
@@ -142,9 +142,9 @@ plugins/YinwuForge/
 
 ## Links | 链接
 
-- 仓库：[github.com/qumingjam/YinwuForge](https://github.com/qumingjam/YinwuForge)
-- 前置：[YinwuPluginLib](https://github.com/qumingjam/YinwuPluginLib)
-- 关联：[YinwuRaid](https://github.com/qumingjam/YinwuRaid) | [YinwuEnchant](https://github.com/qumingjam/YinwuEnchant)
+- 仓库：[github.com/YinwuPotato/YinwuForge](https://github.com/YinwuPotato/YinwuForge)
+- 前置：[YinwuPluginLib](https://github.com/YinwuPotato/YinwuPluginLib)
+- 关联：[YinwuRaid](https://github.com/YinwuPotato/YinwuRaid) | [YinwuEnchant](https://github.com/YinwuPotato/YinwuEnchant)
 - 作者：Qumingjam
 
 ---
