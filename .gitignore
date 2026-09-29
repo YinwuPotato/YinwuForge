@@ -6,3 +6,4 @@ target/
 .lingma/
 *.log
 *.stackdump
+dependency-reduced-pom.xml
