@@ -4,7 +4,7 @@
 - **技术栈**: Java 21, Maven, Paper API 1.21.4
 - **打包**: `mvn clean package` → `target/YinwuForge-<version>.jar`
 - **Folia 兼容**: 是
-- **GitHub**: https://github.com/qumingjam/YinwuForge
+- **GitHub**: https://github.com/YinwuPotato/YinwuForge
 
 ## 功能
 - 药水锻造（为装备附加药水效果）
