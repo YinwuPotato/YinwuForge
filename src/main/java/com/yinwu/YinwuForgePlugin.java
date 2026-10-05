@@ -9,6 +9,7 @@ import com.yinwu.manager.EventListener;
 import com.yinwu.manager.ForgeGUI;
 import com.yinwu.manager.ForgeManager;
 import com.yinwu.manager.MaterialConfig;
+import com.yinwu.manager.MaterialDropManager;
 import com.yinwu.manager.MaterialGUI;
 import com.yinwu.manager.PotionEffectManager;
 import com.yinwu.manager.PotionForgeConfig;
@@ -26,6 +27,7 @@ public final class YinwuForgePlugin extends YinwuPlugin {
     private PotionForgeConfig potionForgeConfig;
     private AlloyForgeConfig alloyForgeConfig;
     private MaterialConfig materialConfig;
+    private MaterialDropManager materialDropManager;
     private ForgeManager forgeManager;
     private AltarManager altarManager;
     private ForgeGUI forgeGUI;
@@ -45,6 +47,7 @@ public final class YinwuForgePlugin extends YinwuPlugin {
         potionForgeConfig = new PotionForgeConfig(this, configManager);
         alloyForgeConfig = new AlloyForgeConfig(this, configManager);
         materialConfig = new MaterialConfig(this, configManager);
+        materialDropManager = new MaterialDropManager(this, materialConfig);
         forgeManager = new ForgeManager(this, configManager, alloyForgeConfig, potionEffectManager);
         altarManager = new AltarManager(this, configManager, forgeManager);
         forgeGUI = new ForgeGUI(this, materialConfig, forgeManager, altarManager, configManager);
@@ -106,6 +109,7 @@ public final class YinwuForgePlugin extends YinwuPlugin {
     public PotionEffectManager getPotionEffectManager() { return potionEffectManager; }
     public AltarManager getAltarManager() { return altarManager; }
     public MaterialConfig getMaterialConfig() { return materialConfig; }
+    public MaterialDropManager getMaterialDropManager() { return materialDropManager; }
     public ForgeGUI getForgeGUI() { return forgeGUI; }
     public MaterialGUI getMaterialGUI() { return materialGUI; }
 }

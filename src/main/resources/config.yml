@@ -291,6 +291,285 @@ boss:
 trade:
   singularity-price: 10    # 奇点交易价格（绿宝石）
 
+# ============================================================
+# 材料获取掉落配置（击杀怪物 / 挖掘方块，全部低概率）
+# mob-drops:   玩家击杀对应怪物额外掉落浓缩材料
+# block-drops: 玩家挖掘对应方块额外掉落浓缩材料
+# 命中时额外掉落，不影响原版掉落
+# ============================================================
+acquisition:
+
+  # ---- 矿物系列（挖掘对应矿石）----
+  copper:
+    enabled: true
+    block-drops:
+      - block: COPPER_ORE
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+      - block: DEEPSLATE_COPPER_ORE
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+  gold:
+    enabled: true
+    block-drops:
+      - block: GOLD_ORE
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+      - block: DEEPSLATE_GOLD_ORE
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+      - block: NETHER_GOLD_ORE
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+  iron:
+    enabled: true
+    block-drops:
+      - block: IRON_ORE
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+      - block: DEEPSLATE_IRON_ORE
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+  diamond:
+    enabled: true
+    block-drops:
+      - block: DIAMOND_ORE
+        chance: 0.04
+        amount-min: 1
+        amount-max: 1
+      - block: DEEPSLATE_DIAMOND_ORE
+        chance: 0.04
+        amount-min: 1
+        amount-max: 1
+  netherite:
+    enabled: true
+    block-drops:
+      - block: ANCIENT_DEBRIS
+        chance: 0.02
+        amount-min: 1
+        amount-max: 1
+
+  # ---- 亡灵系列（击杀对应怪物）----
+  rotten_flesh:
+    enabled: true
+    mob-drops:
+      - entity: ZOMBIE
+        chance: 0.05
+        amount-min: 1
+        amount-max: 2
+      - entity: HUSK
+        chance: 0.05
+        amount-min: 1
+        amount-max: 2
+      - entity: ZOMBIE_VILLAGER
+        chance: 0.05
+        amount-min: 1
+        amount-max: 2
+  bone:
+    enabled: true
+    mob-drops:
+      - entity: SKELETON
+        chance: 0.05
+        amount-min: 1
+        amount-max: 2
+      - entity: STRAY
+        chance: 0.05
+        amount-min: 1
+        amount-max: 2
+  gunpowder:
+    enabled: true
+    mob-drops:
+      - entity: CREEPER
+        chance: 0.05
+        amount-min: 1
+        amount-max: 2
+  spider_eye:
+    enabled: true
+    mob-drops:
+      - entity: SPIDER
+        chance: 0.05
+        amount-min: 1
+        amount-max: 2
+      - entity: CAVE_SPIDER
+        chance: 0.05
+        amount-min: 1
+        amount-max: 2
+  phantom_membrane:
+    enabled: true
+    mob-drops:
+      - entity: PHANTOM
+        chance: 0.03
+        amount-min: 1
+        amount-max: 1
+
+  # ---- 农牧系列（击杀动物 / 收获作物）----
+  honeycomb:
+    enabled: true
+    mob-drops:
+      - entity: BEE
+        chance: 0.04
+        amount-min: 1
+        amount-max: 1
+  turtle_scute:
+    enabled: true
+    mob-drops:
+      - entity: TURTLE
+        chance: 0.04
+        amount-min: 1
+        amount-max: 1
+  poisonous_potato:
+    enabled: true
+    mob-drops:
+      - entity: ZOMBIE
+        chance: 0.02
+        amount-min: 1
+        amount-max: 1
+  armadillo_scute:
+    enabled: true
+    mob-drops:
+      - entity: ARMADILLO
+        chance: 0.04
+        amount-min: 1
+        amount-max: 1
+  nether_wart:
+    enabled: true
+    block-drops:
+      - block: NETHER_WART
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+
+  # ---- 炼狱系列（击杀怪物 / 挖掘方块）----
+  ghast_tear:
+    enabled: true
+    mob-drops:
+      - entity: GHAST
+        chance: 0.04
+        amount-min: 1
+        amount-max: 1
+  magma_cream:
+    enabled: true
+    mob-drops:
+      - entity: MAGMA_CUBE
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+  blaze_rod:
+    enabled: true
+    mob-drops:
+      - entity: BLAZE
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+  quartz:
+    enabled: true
+    block-drops:
+      - block: NETHER_QUARTZ_ORE
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+  glowstone_dust:
+    enabled: true
+    block-drops:
+      - block: GLOWSTONE
+        chance: 0.04
+        amount-min: 1
+        amount-max: 1
+
+  # ---- 末地系列（击杀怪物 / 挖掘方块）----
+  shulker_shell:
+    enabled: true
+    mob-drops:
+      - entity: SHULKER
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+  ender_pearl:
+    enabled: true
+    mob-drops:
+      - entity: ENDERMAN
+        chance: 0.04
+        amount-min: 1
+        amount-max: 1
+  chorus_fruit:
+    enabled: true
+    block-drops:
+      - block: CHORUS_PLANT
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+      - block: CHORUS_FLOWER
+        chance: 0.05
+        amount-min: 1
+        amount-max: 1
+  dragon_breath:
+    enabled: true
+    mob-drops:
+      - entity: ENDER_DRAGON
+        chance: 0.02
+        amount-min: 1
+        amount-max: 1
+  end_stone:
+    enabled: true
+    block-drops:
+      - block: END_STONE
+        chance: 0.03
+        amount-min: 1
+        amount-max: 1
+
+  # ---- 挑战系列（Boss / 稀有，极低概率）----
+  dragon_egg:
+    enabled: true
+    mob-drops:
+      - entity: ENDER_DRAGON
+        chance: 0.01
+        amount-min: 1
+        amount-max: 1
+  nether_star:
+    enabled: true
+    mob-drops:
+      - entity: WITHER
+        chance: 0.01
+        amount-min: 1
+        amount-max: 1
+  heart_of_the_sea:
+    enabled: true
+    mob-drops:
+      - entity: ELDER_GUARDIAN
+        chance: 0.02
+        amount-min: 1
+        amount-max: 1
+  echo_shard:
+    enabled: true
+    mob-drops:
+      - entity: WARDEN
+        chance: 0.01
+        amount-min: 1
+        amount-max: 1
+  sponge:
+    enabled: true
+    block-drops:
+      - block: SPONGE
+        chance: 0.02
+        amount-min: 1
+        amount-max: 1
+
+  # ---- 药水材料（挖掘紫水晶）----
+  potion:
+    enabled: true
+    block-drops:
+      - block: AMETHYST_CLUSTER
+        chance: 0.03
+        amount-min: 1
+        amount-max: 1
+
 # 锻造祭坛设置
 altar:
   enabled: true            # 是否启用祭坛锻造

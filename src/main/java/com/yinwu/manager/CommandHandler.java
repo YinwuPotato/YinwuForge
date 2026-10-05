@@ -114,6 +114,7 @@ public class CommandHandler implements TabExecutor {
         plugin.getPotionForgeConfig().reload();
         plugin.getAlloyForgeConfig().reload();
         materialConfig.reload();
+        plugin.getMaterialDropManager().reload();
         altarManager.reloadConfig();
         forgeManager.reload();
         sender.sendMessage(ChatColor.GREEN + "配置已成功重载！");
