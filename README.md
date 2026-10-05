@@ -39,9 +39,31 @@ A Minecraft forge plugin for enhancing equipment through altars, materials, and 
 
 1. 将 `YinwuForge-1.2.3.jar` 放入 `plugins/` 目录
 2. 重启服务器
-3. 搭建**锻造祭坛**结构（见下方用法说明）
+3. 搭建**锻造祭坛**结构（见 §锻造祭坛结构）
 4. 右键祭坛中心（锻造台）→ 打开**锻造GUI**
 5. 放入装备 + 对应核心材料（可选放入概率调整材料）→ 点击锻造！
+
+---
+
+## 锻造祭坛结构
+
+**第一层（底层，必须完整 5×5 才能激活）：**
+
+```
+B B B B B      B = 下界合金块（NETHERITE_BLOCK）
+B A A A B      C = 锻造台（SMITHING_TABLE，正中心）
+B A C A B      A = 占位符，不检测，可放任意方块
+B A A A B
+B B B B B
+```
+
+**第二层（可选，放在锻造台正上方一格 Y+1，形状相同，只有 B 位置生效）：**
+
+每个 B 方块为锻造提供 **成功率 +2%、失败率 −1%**，最多计算 **16 个**（满配 = 成功率 +32%、失败率 −16%）。
+
+> 两层结构与加成数值都在 `config.yml` 的 `altar:` 段可调：
+> `center-block`（中心方块）、`base-blocks`（底座方块列表）、`structure-layers`（5×5 布局）、`layer-bonus`（加成）。
+> 游戏内也可以让玩家执行 `/yinwuforge help` 看到祭坛搭建提示。
 
 ---
 
@@ -109,6 +131,17 @@ mvn clean package
 
 产出：`target/YinwuForge-1.2.3.jar`
 
+> **前置步骤（首次构建必需）**：本插件依赖共享库 `YinwuPluginLib`，而它不在 Maven 中央仓库。
+> 首次构建前先克隆并安装一次：
+>
+> ```bash
+> git clone https://github.com/YinwuPotato/YinwuPluginLib.git
+> cd YinwuPluginLib && mvn clean install
+> ```
+>
+> 之后回到本仓库 `mvn clean package` 即可。父 POM（`net.yinwu:YinwuPlugins:1.0.1`）
+> 已随仓库提供在 `parent/pom.xml`，无需额外操作。
+
 ---
 
 ## Dependencies | 依赖
@@ -145,11 +178,24 @@ plugins/YinwuForge/
 - 仓库：[github.com/YinwuPotato/YinwuForge](https://github.com/YinwuPotato/YinwuForge)
 - 前置：[YinwuPluginLib](https://github.com/YinwuPotato/YinwuPluginLib)
 - 关联：[YinwuRaid](https://github.com/YinwuPotato/YinwuRaid) | [YinwuEnchant](https://github.com/YinwuPotato/YinwuEnchant)
-- 作者：Qumingjam
+- 作者：Qumingjam（插件内 `plugin.yml` 声明为 `yinwu`）
 
 ---
 
 ## Changelog | 更新日志
+
+### 未发版（v1.2.3 之后）
+- 新增 `MaterialDropManager`：材料掉落管理（击杀怪物 / 挖掘对应方块低概率额外掉落浓缩材料，无需 MythicMobs）
+- 同步更新命令处理与配置
+
+### v1.2.3
+- 命令统一、材料一览 GUI、ForgeGUI 美化
+- 锻造 lore 显示攻速/伤害**有效值**（原版 tooltip 只显示修饰符原始值）
+- 修复下界合金剑基础伤害
+
+### v1.2.2
+- lore 显示有效攻速/伤害
+- 修复下界合金剑基础伤害
 
 ### v1.2.1
 - 版本号更新
